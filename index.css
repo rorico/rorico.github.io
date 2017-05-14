@@ -1,0 +1,14 @@
+.header ul {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+
+.header li {
+	display: inline;
+	margin: 10px;
+}
+
+.content {
+	display: none;
+}
