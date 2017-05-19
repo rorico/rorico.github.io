@@ -13,27 +13,55 @@
 </script>
 </head>
 <body>
-<div>
-	<div class="header">
-		<ul>
-			<li><a href="#home">Home</a></li>
-			<li><a href="#projects">Side Projects</a></li>
-			<li><a href="#work">Work Experience</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
+<div class="header">
+	<ul>
+		<li><a href="#home">Home</a></li>
+		<li><a href="#projects">Side Projects</a></li>
+		<li><a href="#work">Work Experience</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+</div>
+<div id="projects" class="content">
+	<div class="accordion">
+		<input type="checkbox" id="ac-p1" checked>
+		<label for="ac-p1"><span class="title">Test</span><span class="date">Aug 12, 2016</span></label>
+		<div class="accordion-content">
+			Contentasklmdfl
+			<br>
+			askd
+			<br>
+			fla
+			<br>
+			sfas
+			<br>dfkmasdfmkals
+			fkma
+			<br>
+			sfmkd
+		</div>
 	</div>
-	<div id="home" class="content">
-		Hello, I'm Daniel Chen
+	<div class="accordion">
+		<input type="checkbox" id="ac-p2">
+		<label for="ac-p2">This</label>
+		<div class="accordion-content">
+		Website
+		</div>
 	</div>
-	<div id="projects" class="content">
-		this
+</div>
+<div id="work" class="content">
+	<div class="accordion">
+		<input type="checkbox" id="ac-w1">
+		<label for="ac-w1">Tulip Retail</label>
+		<div class="accordion-content">
+		Website
+		</div>
 	</div>
-	<div id="work" class="content">
-		Tulip Retail
-	</div>
-	<div id="contact" class="content">
-		daniel@rorico.ca
-	</div>
+</div>
+<div id="contact" class="content">
+	daniel@rorico.ca
+</div>
+<!-- home is at the end for css purposes -->
+<div id="home" class="content default">
+	Hello, I'm Daniel Chen.
 </div>
 <script src="jquery.min.js"></script>
 <script src="index.js"></script>

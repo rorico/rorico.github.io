@@ -43,3 +43,76 @@ body {
 .header, .content {
 	font-size: 1.5em;
 }
+
+.accordion {
+	border: 1px solid black;
+	border-radius: 5px;
+	max-width: 600px;
+	width: 100%;
+	margin: 10px auto;
+	text-align: left;
+}
+
+.accordion input {
+	display: none;
+}
+
+.accordion label {
+	padding: 10px 5%;
+	display: block;
+}
+
+.accordion label .title {
+	text-align: left;
+	font-size: bold;
+}
+
+.accordion label .date {
+	float: right;
+	padding-top: 0.2em;
+	color: grey;
+	font-size: 0.8em;
+}
+
+.accordion .accordion-content {
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0;
+	max-height: 0;
+	transition: max-height 0.3s ease-in-out;
+	padding: 0 5%;
+	width: 90%;
+	/*animation: open 0.3s;*/
+}
+
+.accordion input:checked ~ .accordion-content {
+	border-top: 1px solid black;
+	height: auto;
+	max-height: 1000px;
+	transition: max-height 0.3s ease-in-out;
+	padding: 5%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes open {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 50%;
+  }
+  100% {
+    height: 100%;
+  }
+}
