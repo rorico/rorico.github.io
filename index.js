@@ -6,8 +6,15 @@ $(document).ready(function() {
 	function showPage(page) {
 		var page = window.location.hash || "#home";
 		if (currentPage !== page) {
-			$(currentPage).hide();
-			$(page).show();
+			// i'll be honest, I don't like this way of doing it
+			$(".header a").each(function() {
+				var $this = $(this);
+				if ($this.attr("href") === page) {
+					$this.addClass("selected");
+				} else {
+					$this.removeClass("selected")
+				}
+			})
 			currentPage = page;
 		}
 	}

@@ -1,3 +1,6 @@
+body {
+	text-align: center;
+}
 .header ul {
 	list-style: none;
 	padding: 0;
@@ -9,6 +12,34 @@
 	margin: 10px;
 }
 
+.header a {
+	color: black;
+	text-decoration: none;
+}
+
+.header a.selected,
+.header a:hover {
+	color: #008eff;
+	/*text-decoration: underline blue;*/
+}
+
 .content {
 	display: none;
+	width: 70%;
+	text-align: center;
+}
+
+.content.default,
+.content:target {
+	display: inline-block;
+	animation: fadeIn 0.5s;
+}
+
+/* only show default if there is no target */
+.content:target ~ .default {
+	display: none;
+}
+
+.header, .content {
+	font-size: 1.5em;
 }
