@@ -1,5 +1,6 @@
 body {
 	text-align: center;
+	font-family: 'Roboto', sans-serif;
 }
 .header ul {
 	list-style: none;
@@ -22,9 +23,14 @@ body {
 	color: #008eff;
 }
 
+a {
+	color: #008eff;
+	text-decoration: none;
+}
+
 .content {
 	display: none;
-	width: 70%;
+	width: 60%;
 	text-align: center;
 }
 
@@ -41,12 +47,13 @@ body {
 
 .header, .content {
 	font-size: 1.5em;
+	line-height: 1.5em;
 }
 
 .accordion {
-	border: 1px solid black;
+	border: 1px solid grey;
 	border-radius: 5px;
-	max-width: 600px;
+	max-width: 1000px;
 	width: 100%;
 	margin: 10px auto;
 	text-align: left;
@@ -62,8 +69,7 @@ body {
 }
 
 .accordion label .title {
-	text-align: left;
-	font-size: bold;
+	font-weight: bold;
 }
 
 .accordion label .date {
@@ -71,6 +77,7 @@ body {
 	padding-top: 0.2em;
 	color: grey;
 	font-size: 0.8em;
+	font-weight: normal;
 }
 
 .accordion .accordion-content {
@@ -84,7 +91,7 @@ body {
 }
 
 .accordion input:checked ~ .accordion-content {
-	border-top: 1px solid black;
+	border-top: 1px solid grey;
 	height: auto;
 	max-height: 1000px;
 	transition: max-height 0.3s ease-in-out;
