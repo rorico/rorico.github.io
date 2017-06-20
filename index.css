@@ -109,3 +109,11 @@ a {
     opacity: 1;
   }
 }
+
+.accordion-content img {
+	width: 40%;
+}
+
+br {
+	line-height: 2em;
+}
