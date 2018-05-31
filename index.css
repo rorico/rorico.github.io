@@ -1,16 +1,12 @@
 body {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
-}
-.header ul {
-	list-style: none;
-	padding: 0;
-	text-align: center;
+	margin: 0;
 }
 
-.header li {
-	display: inline;
-	margin: 10px;
+.placeholder {
+	visibility: hidden;
+	margin-bottom: 1em;
 }
 
 .header a {
@@ -19,8 +15,40 @@ body {
 }
 
 .header a.selected,
-.header a:hover {
+.header a:hover,
+:target a {
 	color: #008eff;
+}
+.header {
+	position: absolute;
+	top: 1em;
+	font-size: 1.5em;
+}
+.header a {
+	position: relative;
+	left: -50%;
+}
+
+/*
+need to do this manually
+sizes are: 2.67,5.88,7.58,3.46
+with 14px padding
+*/
+.header.home {
+	/*left: 20%;*/
+	left: calc(50% - 9.795em + 1.335em - 42px);
+}
+.header.projects {
+	/*left: 40%;*/
+	left: calc(50% - 9.795em + 5.61em - 14px);
+}
+.header.work {
+	/*left: 60%;*/
+	left: calc(50% - 9.795em + 12.34em + 14px);
+}
+.header.contact {
+	/*left: 80%;*/
+	left: calc(50% - 9.795em + 17.86em + 42px);
 }
 
 a {
@@ -28,24 +56,29 @@ a {
 	text-decoration: none;
 }
 
-.content {
+.content{
 	display: none;
 	width: 60%;
 	text-align: center;
 }
 
 .content.default,
-.content:target {
+:target .content {
 	display: inline-block;
 	animation: fadeIn 0.5s;
 }
 
 /* only show default if there is no target */
+.default:target ~ .content {
+	display: none;
+}
+
+
 .content:target ~ .default {
 	display: none;
 }
 
-.header, .content {
+.header, .content, .placeholder {
 	font-size: 1.5em;
 	line-height: 1.5em;
 }
