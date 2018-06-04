@@ -62,19 +62,14 @@ a {
 	text-align: center;
 }
 
-.content.default,
+.default .content,
 :target .content {
 	display: inline-block;
 	animation: fadeIn 0.5s;
 }
 
 /* only show default if there is no target */
-.default:target ~ .content {
-	display: none;
-}
-
-
-.content:target ~ .default {
+:target ~ .default .content {
 	display: none;
 }
 
