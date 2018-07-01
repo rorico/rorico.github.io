@@ -16,8 +16,12 @@ body {
 
 .header a.selected,
 .header a:hover,
-:target a {
+:target a,
+.default a {
 	color: #008eff;
+}
+:target ~ .default a {
+	color: initial;
 }
 .header {
 	position: absolute;
