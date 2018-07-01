@@ -146,6 +146,10 @@ a {
 	width: 40%;
 }
 
+img.fit {
+	width: 80%;
+}
+
 br {
 	line-height: 2em;
 }
